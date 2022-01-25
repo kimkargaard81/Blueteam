@@ -1,0 +1,79 @@
+https://mitre-attack.github.io/attack-navigator/
+
+MITRE ATT&CK provides an overview of the techniques used by various APTs and one can use the Attack Navigator to outline the different phases used by a specific APT. 
+
+The different phases of MITRE ATT&CK are:
+
+1. Initial Access
+
+Currently 9 techniques for initial access:
+
+        Drive-by Compromise
+        Exploit public-facing application
+        External remote services
+        Hardware additions
+        Phishing
+        Replication through removable media
+        Supply chain compromise
+        Trusted relationship
+        Valid accounts
+
+2. Execution
+
+These techniques are used to describe ways that adversaries will execute malicious code for a number of purposes, and at the time of writing currently includes 12 top-level techniques.
+ 
+        Command and Scripting Interpreter
+        Container Administration Command
+        Deploy Container
+        Exploitation for Client Execution
+        Inter-Process Communication
+        Native API
+        Scheduled Task/Job
+        Shared Modules
+        Software Deployment Tools
+        System Services
+        User Execution
+        Windows Management Instrumentation
+
+Persistence
+
+Once an adversary has access to a system they need to attempt to maintain their foothold by hiding from the defenders and utilising multiple methods to regain access to the compromised host. At the time of writing there are currently 19 high-level techniques for this category. 
+
+        Account Manipulation
+        BITS jobs
+        Boots or Logon Autostart Execution
+        Boot or Logon Initialisation Scripts
+        Browser Extensions
+        Compromise Client Software Binary
+        Create Account
+        Create or Modify System Process
+        Event Triggered Execution
+        External Remote Services
+        Hijack Execution Flow
+        Implant Internal Image
+        Modify Authentication Process
+        Office Application Startup
+        Pre-OS Boot
+        Scheduled Task/Job
+        Server Software Component
+        Traffic Signaling
+        Valid Accounts
+        
+Privilege Escalation
+
+Defense Evasion
+
+Credential Access
+
+Discovery
+
+Lateral Movement
+
+Collection
+
+Command and Control
+
+Exfiltration
+
+Impact
+
