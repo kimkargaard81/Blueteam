@@ -1,3 +1,5 @@
+Volatility can be found here: https://github.com/volatilityfoundation/volatility
+On Kali, run python vol.py -f ... (see below). 
 Command List
 volatility -f memdump.mem imageinfo // Take memory image “memdump.mem” and determine the suggested profile for analysis. The profile is the operating system, version, and architecture.
 
