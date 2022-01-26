@@ -42,3 +42,22 @@ index="botsv1" earliest=0 Image="*\\cmd.exe" | stats values(CommandLine) by host
 
 The above search query is using a new parameter, “Image=”. This is derived from Sysmon logs, such as Event ID 1, ‘New Process Created’. The Image field in Sysmon events shows the executable that has generated the process, in this example, cmd.exe, which should be located at C:\Windows\System32\cmd.exe (but we can wildcard the path). After the search for cmd.exe, we’re retrieving the events using values(CommandLine) to show what commands were used, and finally sorting it per host. Let’s see how this search looks once it has been run (with no event sampling):
 
+https://user-images.githubusercontent.com/89241760/151165504-3e51bd97-945f-44c7-ab81-2f5be0f8379a.png
+
+
+Use the following search query to identify the malicious activity (for a specific data set):
+
+index="botsv1" sourcetype="stream:http" http_method=POST uri="/joomla/administrator/index.php"
+
+The below will allow you to add a specific timestamp to your query. 
+
+| spath timestamp | search timestamp="2016-08-10T21:46:44.453730Z"
+
+Remove the details about timestamps from your search query and add the following 
+
+| table timestamp,form_data
+
+This adds a new nice tabular format, where you can view the most recent or oldest in a very simple way.
+
+
+
