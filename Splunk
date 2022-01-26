@@ -1,0 +1,12 @@
+In Splunk, we can use the search function to locate information from various logs.
+
+search: index="datasource" earliest=0
+
+We are searching through a specific data source from the earliest data set. We could also use the All Time option on the Data Range list on the left hand side.
+
+We can select a slice of the data by selection 1:100 or 1:1000 etc or use all the data by not filtering.
+
+Once all the data has been loaded, there will be some fields listed by Splunk. We can use these to dig deeper into the data. 
+
+https://user-images.githubusercontent.com/89241760/151162865-e9c7d7dc-94bd-40c6-b96c-5d9cec537892.png
+
