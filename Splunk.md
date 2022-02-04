@@ -70,7 +70,16 @@ sourcetype=stream:http dest=”<IP address receiving the request>” http_method
 
 If we want to find out what the file that was uploaded as part of an attack is and we know the host attacked, we can use the following query:
  
-index=botsv1 sourcetype=stream:http dest=”IP″ “multipart/form-data”
+index=botsv1 sourcetype=stream:http dest=”IP″ “multipart/form-data” | head 1
+ 
+and alternative query to the above is:
+
+ index=”botsv1″ dest_ip=192.168.250.70 sourcetype=”stream:http” POST *.exe
+ 
+ To find the md5 hash of a file using Splunk, we could run the following:
+ 
+ <name of executable> sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 CommandLine="<name of executable>"
+|stats values(MD5)
 
 
 
