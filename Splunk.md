@@ -78,7 +78,7 @@ and alternative query to the above is:
  
  To find the md5 hash of a file using Splunk, we could run the following:
  
- <name of executable> sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 CommandLine="<name of executable>"
+ name of executable sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 CommandLine="name of executable"
 |stats values(MD5)
 
 
