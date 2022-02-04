@@ -59,5 +59,17 @@ Remove the details about timestamps from your search query and add the following
 
 This adds a new nice tabular format, where you can view the most recent or oldest in a very simple way.
 
+If we know that a site has been defaced or attacked from the web, we assume then that the web server is then the client IP, so we could use the following query to determine where the defacement file was downloaded from. 
+
+c_ip=IP 
+| stats count by url
+
+Splunk has a built in stream to find brute force attacks against a server.
+
+sourcetype=stream:http dest=”<IP address receiving the request>” http_method=POST |stats count BY src, form_data, status
+
+If we 
+
+
 
 
