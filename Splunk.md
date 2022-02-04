@@ -68,7 +68,9 @@ Splunk has a built in stream to find brute force attacks against a server.
 
 sourcetype=stream:http dest=”<IP address receiving the request>” http_method=POST |stats count BY src, form_data, status
 
-If we 
+If we want to find out what the file that was uploaded as part of an attack is and we know the host attacked, we can use the following query:
+ 
+index=botsv1 sourcetype=stream:http dest=”IP″ “multipart/form-data”
 
 
 
