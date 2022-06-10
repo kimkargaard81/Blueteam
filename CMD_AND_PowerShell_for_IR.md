@@ -54,3 +54,20 @@ Similar to Services, Scheduled Tasks are often abused and utilized a common pers
 
 Get-ScheduledTask -TaskName 'PutANameHere' | Select *
 We can dig deeper by specifying the task we’re interested in, and retrieving all properties for it.
+
+If adversaries utilize malicious Services for persistence as a backdoor (T1543.003) we can detect this with the following PowerShell command that identified the parent processes of listening ports presented in the output of Get-NetTCPConnection:
+
+Get-WmiObject Win32_Service | Where-Object -Property ProcessId -In (Get-NetTCPConnection).OwningProcess | Where-Object -Property State -eq Running | Format-Table ProcessId, Name, Caption, StartMode, State, PathName
+
+nestat allows us to see running connections: 
+netstat -aon or netstat -noab
+
+We can then use the powershell get-process cmdlet to investigate any ids that we want. 
+
+Get-Process -Id "id nr"
+
+if we add -FileVersionInfo at the end, we can get more info about each process. Remember that processes that are system processes will give an error when trying to get that info. 
+
+
+
+
