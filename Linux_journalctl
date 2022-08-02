@@ -1,0 +1,5 @@
+
+If we want to find all the activity from a malicious actor with a known username and IP address
+journalctl | grep username | grep "IP\.IP\.IP\.IP"
+eg: journalctl | grep ftpadam | grep "110\.44\.125\.139"
+
