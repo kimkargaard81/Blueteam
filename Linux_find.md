@@ -8,5 +8,5 @@ find /var/www/html -type f -name ‘*.php’ -mtime +5
 
 files modified between specific times:
 
-find . -newermt "2020-12-01 00:00:00" ! -newermt "2020-12-02 00:00:00" 
+find . -newermt "2020-12-01 00:00:00" ! -newermt "2020-12-02 00:00:00" 2> /dev/null
 
