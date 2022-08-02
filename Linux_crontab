@@ -1,0 +1,7 @@
+crontab -l
+crontab -e
+crontabs located in /var/spool/cron/crontabs/username
+
+To check if an adversary has hidden something in a crontab:
+
+strings /var/spool/cron/crontabs/root
