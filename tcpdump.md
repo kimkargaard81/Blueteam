@@ -16,3 +16,8 @@ all the filters/options for tcpdump
 -e – Get the ethernet header as well.
 -q – Show less verbose output.
 -E – Decrypt IPSEC traffic by providing an encryption key.
+
+It is also possible to pipe to additional commands. So if you want to see a specific keyword, do the following:
+
+sudo tcpdump -lA port http | grep cnn.com
+
