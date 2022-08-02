@@ -1,3 +1,7 @@
+Checking the logs for a specific service:
+
+journalctl | grep -i ftp | less
+
 Checking the /tmp dir to see if there have been any files placed there:
 
 journalctl | grep -i /tmp
