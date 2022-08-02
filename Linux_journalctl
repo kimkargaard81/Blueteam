@@ -1,5 +1,10 @@
+Checking the /tmp dir to see if there have been any files placed there:
+
+journalctl | grep -i /tmp
 
 If we want to find all the activity from a malicious actor with a known username and IP address
+
 journalctl | grep username | grep "IP\.IP\.IP\.IP"
+
 eg: journalctl | grep ftpadam | grep "110\.44\.125\.139"
 
