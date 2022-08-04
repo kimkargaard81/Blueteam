@@ -1,3 +1,7 @@
+To determine the indices that are available to us in Splunk, we can run the following:
+
+| eventcount summarize=false index=* | dedup index | fields index
+
 In Splunk, we can use the search function to locate information from various logs.
 
 search: index="datasource" earliest=0
